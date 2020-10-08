@@ -1,0 +1,6 @@
+﻿@model IEnumerable<ShopItem>
+
+@foreach(ShopItem item in @Model)
+{
+    <p>@item.name  @item.description  @item.price</p>
+}
