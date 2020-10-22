@@ -13,8 +13,8 @@ namespace ASP_PROJECT.Models
             {
                 return new List<Product>()
                 {
-                    new Product() { ID = 1, name = "kapusta", description = "zdrowa i zielona", price = 3, type = "warzywo" },
-                    new Product() { ID = 2, name = "jabłko", description = "snamczne czerwone", price = 1, type = "owoc" }
+                    new Product() { ID = 1, Name = "kapusta", Description = "zdrowa i zielona", Price = 3, Category= "warzywo" },
+                    new Product() { ID = 2, Name = "jabłko", Description = "snamczne czerwone", Price = 1, Category = "owoc" }
                 }.AsQueryable<Product>();
             }
         }
