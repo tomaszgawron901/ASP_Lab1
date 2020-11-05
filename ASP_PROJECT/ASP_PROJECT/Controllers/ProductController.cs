@@ -16,6 +16,8 @@ namespace ASP_PROJECT.Controllers
             this.repository = repository;
         }
 
-        public IActionResult List() => View(this.repository.Products);
+        public IActionResult ListAll() => View(this.repository.Products);
+
+        public IActionResult List(string category) => View(this.repository.Products.Where(product => product.Category == category));
     }
 }
