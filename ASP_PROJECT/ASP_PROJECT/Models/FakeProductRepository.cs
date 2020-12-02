@@ -18,5 +18,15 @@ namespace ASP_PROJECT.Models
                 }.AsQueryable<Product>();
             }
         }
+
+        public Product DeleteProduct(int productID)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SaveProduct(Product product)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

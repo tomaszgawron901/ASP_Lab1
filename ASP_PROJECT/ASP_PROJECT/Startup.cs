@@ -40,9 +40,20 @@ namespace ASP_PROJECT
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
+                endpoints.MapControllerRoute (
                     name: "default",
-                    pattern: "{controller=Product}/{action=List}");
+                    pattern: "{controller=Product}/{action=List}/{id?}");
+
+                endpoints.MapControllerRoute (
+                    name: null,
+                    pattern: "Product/{category}",
+                    defaults: new { controller = "Product", action = "List" });
+
+                endpoints.MapControllerRoute (
+                    name: null,
+                    pattern: "Admin/{action}",
+                    defaults: new { controller = "Admin", action = "Index" });
+
             });
 
             SeedData.EnsurePopulated(app);
