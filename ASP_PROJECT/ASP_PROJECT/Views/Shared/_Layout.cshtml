@@ -10,7 +10,11 @@
 <body>
     <div class="navbar navbar-inverse bg-inverse"
          role="navigation">
-        <a class="navbar-brand" href="#">Sklep sportowy</a>
+        <a class="navbar-brand" href="/">Sklep sportowy</a>
+        <div>
+            Liczba użytkowników:
+            <div id="connections"></div>
+        </div>
     </div>
     <div class="row m-1 p-1 ">
         <div id="categories" class="col-3">
@@ -19,6 +23,36 @@
         <div class="col-9">
             @RenderBody()
         </div>
+        <div class="container">
+            <div class="row">&nbsp;</div>
+            <div class="row">
+                <div class="col-2">User</div>
+                <div class="col-4"><input type="text" id="userInput" /></div>
+            </div>
+            <div class="row">
+                <div class="col-2">Message</div>
+                <div class="col-4"><input type="text" id="messageInput" /></div>
+            </div>
+            <div class="row">&nbsp;</div>
+            <div class="row">
+                <div class="col-6">
+                    <input type="button" id="sendButton" value="Send Message" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <hr />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul id="messagesList"></ul>
+            </div>
+        </div>
     </div>
+    <script src="~/js/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/chat.js"></script>
+    <script src="~/js/counter.js"></script>
 </body>
 </html>

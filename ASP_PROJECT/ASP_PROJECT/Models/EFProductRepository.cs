@@ -21,8 +21,24 @@ namespace ASP_PROJECT.Models
             if (existingProduct != null)
             {
                 this.ctx.Remove(existingProduct);
+                this.ctx.SaveChanges();
             }
             return existingProduct;
+        }
+
+        public Product AddProduct(Product product)
+        {
+            try
+            {
+                this.ctx.Add(product);
+                this.ctx.SaveChanges();
+                return product;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            
         }
 
         public void SaveProduct(Product product)

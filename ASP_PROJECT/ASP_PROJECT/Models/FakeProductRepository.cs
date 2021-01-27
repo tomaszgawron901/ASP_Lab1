@@ -19,6 +19,11 @@ namespace ASP_PROJECT.Models
             }
         }
 
+        public Product AddProduct(Product product)
+        {
+            throw new NotImplementedException();
+        }
+
         public Product DeleteProduct(int productID)
         {
             throw new NotImplementedException();

@@ -20,10 +20,10 @@
             <td>@item.Price.ToString()</td>
             <td class="text-center">
                 <form asp-action="Delete" method="post">
-                    <a asp-action="Edit" class="btn btn-primary" asp-route-ID="@item.ID">
+                    <a asp-action="Edit" class="btn btn-primary" asp-route-productId="@item.ID">
                         Edytuj
                     </a>
-                    <input type="hidden" name="ID" value="@item.ID"/>
+                    <input type="hidden" name="productId" value="@item.ID"/>
                     <button type="submit" class="btn btn-primary">
                         Usuń
                     </button>

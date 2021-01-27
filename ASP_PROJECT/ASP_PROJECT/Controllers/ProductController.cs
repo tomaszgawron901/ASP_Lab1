@@ -15,9 +15,14 @@ namespace ASP_PROJECT.Controllers
         {
             this.repository = repository;
         }
+        public ViewResult List(string category) {
+            if (category != null && category.Length > 0)
+            {
+                return View(repository.Products.Where(p => p.Category == null || p.Category == category));
+            }
+            return View(repository.Products);
+        } 
 
-        public IActionResult ListAll() => View(this.repository.Products);
-
-        public IActionResult List(string category) => View(this.repository.Products.Where(product => product.Category == category));
+        public ViewResult ListAll() => View(repository.Products);
     }
 }

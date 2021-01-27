@@ -9,6 +9,7 @@ namespace ASP_PROJECT.Models
     {
         IQueryable<Product> Products { get; }
         Product DeleteProduct(int productID);
+        Product AddProduct(Product product);
         void SaveProduct(Product product);
     }
 }
